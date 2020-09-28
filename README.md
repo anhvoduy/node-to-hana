@@ -1,2 +1,2 @@
-# nodejs-to-hana
-- nodejs to hanadb
+# node-to-hana
+- node to hana
