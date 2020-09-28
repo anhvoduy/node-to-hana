@@ -6,6 +6,10 @@
   "author": "voduyanh",
   "email": "voduyanh1984@yahoo.com",
   "license": "ISC",
+  "engines": {
+    "node": "12.15.0",
+    "npm": "6.13.4"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
