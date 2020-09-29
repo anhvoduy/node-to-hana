@@ -2,7 +2,7 @@ version: '2'
 services:
   hanadb:
     container_name: hanadb
-    image: store/saplabs/hanaexpress:2.00.045.00.20200121.1
+    image: store/saplabs/hanaexpress:2.00.040.00.20190729.1
     restart: "unless-stopped"
     ports:
       - 39013:39013
@@ -25,15 +25,15 @@ services:
       - --dont-check-mount-points
       - --master-password
       - HXEHana1
-  web:
-    container_name: nodetohana
-    build: ./
-    ports:
-      - "8080:3000"
-    depends_on:
-      - hanadb
-    links:
-      - hanadb
-    volumes:
-      - ./:/home/app
-    command: [ "npm", "start" ]
+  #web:
+  #  container_name: nodetohana
+  #  build: ./
+  #  ports:
+  #    - "8080:3000"
+  #  depends_on:
+  #    - hanadb
+  #  links:
+  #    - hanadb
+  #  volumes:
+  #    - ./:/home/app
+  #  command: [ "npm", "start" ]
