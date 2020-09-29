@@ -2,10 +2,10 @@
   "name": "node-to-hana",
   "description": "nodejs to hanaDB",
   "version": "0.1.0",
-  "private": true,
   "author": "voduyanh",
   "email": "voduyanh1984@yahoo.com",
   "license": "ISC",
+  "private": true,
   "engines": {
     "node": "12.15.0",
     "npm": "6.13.4"
