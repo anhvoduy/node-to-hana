@@ -13,7 +13,7 @@ COPY ./package*.json ./
 
 # Install node_modules, make build package
 RUN npm install
-RUN npm build
+RUN npm run build
 
 # Bundle app source
 COPY . .
