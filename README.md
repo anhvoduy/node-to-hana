@@ -34,7 +34,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 ## Docker Images:
 
-docker pull store/saplabs/hanaexpress:2.00.040.00.20190729.1
+docker pull store/saplabs/hanaexpress:2.00.045.00.20200121.1
 
 https://hub.docker.com/_/sap-hana-express-edition/plans/f2dc436a-d851-4c22-a2ba-9de07db7a9ac?tab=instructions
 
