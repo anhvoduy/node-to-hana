@@ -1,6 +1,6 @@
 {
   "name": "node-to-hana",
-  "description": "nodejs to hanaDB",
+  "description": "nodejs to HanaDB",
   "version": "0.1.0",
   "author": "voduyanh",
   "email": "voduyanh1984@yahoo.com",
@@ -11,14 +11,16 @@
     "npm": "6.13.4"
   },
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
+    "dev": "npx nodemon",
+    "start": "node app"
   },
   "dependencies": {
     "@sap/hana-client": "^2.5.109",
     "next": "9.5.3",
     "react": "16.13.1",
     "react-dom": "16.13.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
   }
 }
