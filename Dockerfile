@@ -8,15 +8,14 @@ WORKDIR /usr/src/app
 # where available (npm@5+)
 COPY ./package*.json ./
 
-# If you are building your code for production
-#RUN npm ci --only=production
-
-# Install node_modules, make build package
+# Install node_modules
 RUN npm install
-RUN npm run build
 
 # Bundle app source
 COPY . .
 
+# If you are building your code for production
+#RUN npm ci --only=production
+
 EXPOSE 3000
-CMD [ "npm", "start" ]
+CMD [ "npm", "build" ]
