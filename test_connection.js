@@ -1,9 +1,13 @@
 var hana = require('@sap/hana-client');
 
-const queryData = function() {  
+const queryData = function() {
+  /**
+   * for local: localhost:39017
+   * for docker-compose: 172.29.0.2:39017
+   */
   var conn = hana.createConnection();
   var conn_params = {
-    serverNode  : 'localhost:39017',
+    serverNode  : '172.29.0.2:39017',
     uid         : 'SYSTEM',
     pwd         : 'HXEHana1'
   };
