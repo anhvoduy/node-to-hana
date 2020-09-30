@@ -1,6 +1,6 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Getting Started with NextJs
 
-## Getting Started
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 https://nextjs.org/docs/getting-started
 
@@ -30,3 +30,26 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+
+## Docker Images:
+
+docker pull store/saplabs/hanaexpress:2.00.040.00.20190729.1
+
+https://hub.docker.com/_/sap-hana-express-edition/plans/f2dc436a-d851-4c22-a2ba-9de07db7a9ac?tab=instructions
+
+https://www.linkedin.com/pulse/sap-hana-express-edition-docker-end-example-vadim-zaripov
+
+## Operation:
+- access to docker hanaDB container (by docker)
+    docker exec -it <container_id> bash
+    docker exec -it 6ec95abd9a54 bash
+- check info & version
+    whoami
+    HDB info
+    ip addr    
+    hdbsql -n localhost:30015 -u SYSTEM -p HXEHana1
+    hdbsql -n localhost:30017 -u SYSTEM -p HXEHana1
+    hdbsql -n localhost:39041 -u SYSTEM -p HXEHana1
+- create database:
+
