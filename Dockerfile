@@ -14,8 +14,11 @@ RUN npm install
 # Bundle app source
 COPY . .
 
+# Build app source
+RUN npm run build
+
 # If you are building your code for production
 #RUN npm ci --only=production
 
 EXPOSE 3000
-CMD [ "npm", "build" ]
+CMD [ "npm", "start" ]
