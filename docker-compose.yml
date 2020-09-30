@@ -25,15 +25,15 @@ services:
       - --dont-check-mount-points
       - --master-password
       - HXEHana1
-  #web:
-  #  container_name: nodetohana
-  #  build: ./
-  #  ports:
-  #    - "8080:3000"
-  #  depends_on:
-  #    - hanadb
-  #  links:
-  #    - hanadb
-  #  volumes:
-  #    - ./:/home/app
-  #  command: [ "npm", "start" ]
+  web:
+    container_name: nodetohana
+    build: ./
+    ports:
+      - "8080:3000"
+    depends_on:
+      - hanadb
+    links:
+      - hanadb
+    volumes:
+      - ./:/home/app
+    command: [ "npm", "start" ]
