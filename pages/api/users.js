@@ -10,14 +10,9 @@ function queryData() {
     };
     var sql = 'SELECT TOP 10 TABLE_NAME, RECORD_COUNT, TABLE_SIZE FROM M_TABLES ORDER BY TABLE_SIZE DESC';
     conn.connect(conn_params, function(err) {
-      if (err) throw err;
+      if (err) reject(err);
       conn.exec(sql, function (err, result) {
-        if (err) {
-          //console.log('ERR:', err);
-          //throw err;
-          reject(err);
-        }
-        //console.log('result:', result);
+        if (err) reject(err);
         conn.disconnect();
         resolve(result);
       })
@@ -30,7 +25,7 @@ async function handler(req, res) {
   {
     var tables = await queryData();
     tables.map((item, index) => { item.id = (index+1); });
-    console.log(tables);
+    //console.log(tables);
     
     //const users = [{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }];
     res.status(200).json(tables);
